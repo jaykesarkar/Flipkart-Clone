@@ -11,7 +11,9 @@
 
 # production
 /build
-/config.env
+
+# Secret file
+config.env
 /id&password.txt
 
 # misc

@@ -2,11 +2,14 @@ import React from "react";
 import { Box, Typography, styled } from "@mui/material";
 import { categoryData } from "../../data/categoryData";
 
-const Component = styled(Box)`
-	display: flex;
-	justify-content: space-between;
-	margin: 56px 65px 0 65px;
-`;
+const Component = styled(Box)(({ theme }) => ({
+	display: "flex",
+	justifyContent: "space-between",
+	margin: "55px 130px 0 130px !important",
+	[theme.breakpoints.down("lg")]: {
+		margin: "0px !important",
+	},
+}));
 const Container = styled(Box)`
 	padding: 12px 8px;
 	text-align: center;

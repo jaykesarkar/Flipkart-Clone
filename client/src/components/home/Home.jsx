@@ -7,7 +7,7 @@ import Ads from "./Ads";
 import { Box, styled } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux"; // hooks
 import { getProducts as allProducts } from "../../redux/actions/productActions";
-Ads;
+
 const Component = styled(Box)`
 	padding: 20px 10px;
 	background: #f2f2f2;

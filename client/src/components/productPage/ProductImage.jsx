@@ -2,23 +2,28 @@ import React from "react";
 import { Button, Box, styled } from "@mui/material";
 import { ShoppingCart, FlashOn } from "@mui/icons-material";
 
-const LeftContainer = styled(Box)`
-	min-width: 40px;
-	padding: 40px 0 0 80px;
-`;
+const LeftContainer = styled(Box)(({ theme }) => ({
+	minWidth: "40%",
+	padding: "40px 0 0 80px",
+	[theme.breakpoints.down("md")]: {
+		padding: "20px 40px",
+	},
+}));
+
 const Image = styled("img")({
-	width: "90%",
+	width: "95%",
 });
 const StyledButton = styled(Button)`
-	width: 47%;
+	width: 46%;
 	border-radius: 2px;
 	height: 50px;
+	color: #fff;
 `;
 
 const ProductImage = ({ product }) => {
 	return (
 		<LeftContainer>
-			<Box style={{ padding: "15px 20px", border: "1px solid #f0f0f0" }}>
+			<Box style={{ padding: "15px 20px", border: "1px solid #fafafa" }}>
 				<Image src={product.detailUrl} alt="productImage" />
 			</Box>
 

@@ -5,15 +5,19 @@ import { useParams } from "react-router-dom";
 import { getProductDetails } from "../../redux/actions/productActions";
 import { Box, Typography, Grid, styled } from "@mui/material";
 import ProductImage from "./ProductImage";
+import ProductDetail from "./ProductDetail";
 
 const Component = styled(Box)`
 	margin-top: 55px;
 	background: "#f2f2f2";
 `;
-const Container = styled(Grid)`
-	background: #ffffff;
-	display: flex;
-`;
+const Container = styled(Grid)(({ theme }) => ({
+	background: "#FFFFFF",
+	display: "flex",
+	[theme.breakpoints.down("md")]: {
+		margin: 0,
+	},
+}));
 const RightContainer = styled(Grid)`
 	margin-top: 50px;
 	& > p {
@@ -43,7 +47,12 @@ const DetailView = () => {
 					</Grid>
 					<RightContainer item lg={8} md={8} sm={8} xs={12}>
 						<Typography
-							style={{ marginTop: 5, color: "#878787", fontSize: 14 }}
+							style={{
+								marginTop: 5,
+								color: "#212121",
+								fontSize: 18,
+								fontWeight: 400,
+							}}
 						>
 							{product.title.longTitle}
 						</Typography>
@@ -68,6 +77,7 @@ const DetailView = () => {
 								{product.price.discount} off
 							</span>
 						</Typography>
+						<ProductDetail product={product} />
 					</RightContainer>
 				</Container>
 			)}

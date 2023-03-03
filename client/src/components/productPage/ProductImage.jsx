@@ -13,6 +13,7 @@ const LeftContainer = styled(Box)(({ theme }) => ({
 const Image = styled("img")({
 	width: "95%",
 });
+
 const StyledButton = styled(Button)`
 	width: 46%;
 	border-radius: 2px;
@@ -23,7 +24,7 @@ const StyledButton = styled(Button)`
 const ProductImage = ({ product }) => {
 	return (
 		<LeftContainer>
-			<Box style={{ padding: "15px 20px", border: "1px solid #fafafa" }}>
+			<Box style={{ padding: "15px 20px", border: "1.5px solid #fafafa" }}>
 				<Image src={product.detailUrl} alt="productImage" />
 			</Box>
 

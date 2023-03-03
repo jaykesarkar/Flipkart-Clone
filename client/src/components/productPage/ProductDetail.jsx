@@ -67,7 +67,7 @@ const ProductDetail = ({ product }) => {
 				</Typography>
 				<Typography>
 					<Badge />
-					Partner OfferBuy this product and get upto ₹500 off
+					Partner Offer Buy this product and get upto ₹500 off
 					<TermsConditions>Know More</TermsConditions>
 				</Typography>
 

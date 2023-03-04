@@ -62,16 +62,14 @@ const Search = () => {
 			</SearchIconWrapper>
 			<ListWrapper>
 				{products
-					.filter((product) =>
-						product.title.longTitle.includes(text)
-					)
+					.filter((product) => product.title.longTitle.includes(text))
 					.map((product) => (
 						<ListItem>
 							<Link
 								to={`/product/${product.id}`}
 								style={{ textDecoration: "none", color: "inherit" }}
-								// onClick={() => setOpen(true)}  
-								onChange={() => setText("")}  
+								// onClick={() => setOpen(true)}
+								onChange={() => setText("")}
 							>
 								{product.title.longTitle}
 							</Link>

@@ -5,6 +5,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LoginDialog from "../login/LoginDialog";
 import { DataContext } from "../../context/Context";
 import Profile from "./Profile";
+import { Link } from "react-router-dom";
 
 const Wrapper = styled(Box)(({ theme }) => ({
 	margin: "0 3% 0 auto",
@@ -34,7 +35,9 @@ const LoginButton = styled(Button)`
 	border-radius: 2px;
 	box-shadow: none;
 	font-weight: 600;
+	margin-left: 20px;
 	height: 32px;
+
 	:hover {
 		background-color: #fff;
 	}
@@ -62,8 +65,13 @@ const CustomButtons = () => {
 			<Typography style={{ marginTop: 3 }}>More</Typography>
 
 			<Container>
-				<ShoppingCartIcon />
-				<Typography>Cart</Typography>
+				<Link
+					to={"/cart"}
+					style={{ textDecoration: "none", color: "inherit", display: "flex" }}
+				>
+					<ShoppingCartIcon />
+					<Typography>Cart</Typography>
+				</Link>
 			</Container>
 			<LoginDialog open={isOpen} setOpen={setIsOpen} setProfile={setProfile} />
 		</Wrapper>

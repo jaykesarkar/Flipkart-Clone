@@ -23,16 +23,18 @@ const Text = styled(Typography)`
 
 const Category = () => {
 	return (
-		<Component>
-			{categoryData.map(({ id, url, text }) => {
-				return (
-					<Container key={id}>
-						<img src={url} alt="category" style={{ width: 64 }} />
-						<Text>{text}</Text>
-					</Container>
-				);
-			})}
-		</Component>
+		<Box style={{ background: "#fff" }}>
+			<Component>
+				{categoryData.map(({ id, url, text }) => {
+					return (
+						<Container key={id}>
+							<img src={url} alt="category" style={{ width: 64 }} />
+							<Text>{text}</Text>
+						</Container>
+					);
+				})}
+			</Component>
+		</Box>
 	);
 };
 

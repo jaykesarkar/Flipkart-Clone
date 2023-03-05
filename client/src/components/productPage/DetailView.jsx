@@ -16,6 +16,7 @@ const Container = styled(Grid)(({ theme }) => ({
 	display: "flex",
 	[theme.breakpoints.down("md")]: {
 		margin: 0,
+		padding: 30,
 	},
 }));
 const RightContainer = styled(Grid)`

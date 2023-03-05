@@ -8,7 +8,6 @@ import {
 	Drawer,
 	List,
 	styled,
-	ListItem,
 } from "@mui/material";
 import { Menu } from "@mui/icons-material";
 import { Link } from "react-router-dom";
@@ -44,7 +43,7 @@ const PlusImage = styled("img")({
 
 const CustomButtonWrapper = styled(Box)(({ theme }) => ({
 	margin: "0 5% 0 auto",
-	[theme.breakpoints.down("sm")]: {
+	[theme.breakpoints.down("md")]: {
 		display: "none",
 	},
 }));
@@ -74,9 +73,9 @@ export const Header = () => {
 	const navbarList = () => {
 		<Box style={{ width: 250 }} onClick={handleClose}>
 			<List>
-				<ListItem>
+				<listItem>
 					<CustomButtons />
-				</ListItem>
+				</listItem>
 			</List>
 		</Box>;
 	};

@@ -34,11 +34,11 @@ const ListWrapper = styled(List)`
 
 const Search = () => {
 	const [text, setText] = useState();
-	// const [ open, setOpen ] = useState(true)
+	const [open, setOpen] = useState(true);
 
 	const getText = (textValue) => {
 		setText(textValue);
-		// setOpen(false)
+		setOpen(false);
 	};
 
 	const getProducts = useSelector((state) => state.getProducts);
@@ -55,27 +55,29 @@ const Search = () => {
 			<InputSearchBase
 				placeholder="Search for products, brand and more"
 				onChange={(e) => getText(e.target.value)}
-				value={text}
 			/>
 			<SearchIconWrapper>
 				<SearchIcon></SearchIcon>
 			</SearchIconWrapper>
-			<ListWrapper>
-				{products
-					.filter((product) => product.title.longTitle.includes(text))
-					.map((product) => (
-						<ListItem>
-							<Link
-								to={`/product/${product.id}`}
-								style={{ textDecoration: "none", color: "inherit" }}
-								// onClick={() => setOpen(true)}
-								onChange={() => setText("")}
-							>
-								{product.title.longTitle}
-							</Link>
-						</ListItem>
-					))}
-			</ListWrapper>
+			{text && (
+				<ListWrapper hidden={open}>
+					{products
+						.filter((product) =>
+							product.title.longTitle.toLowerCase().includes(text.toLowerCase())
+						)
+						.map((product) => (
+							<ListItem>
+								<Link
+									to={`/product/${product.id}`}
+									style={{ textDecoration: "none", color: "inherit" }}
+									onClick={() => setOpen(true)}
+								>
+									{product.title.longTitle}
+								</Link>
+							</ListItem>
+						))}
+				</ListWrapper>
+			)}
 		</SearchContainer>
 	);
 };

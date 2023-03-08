@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ButtonGroup, Button, styled } from "@mui/material";
-import AddIcon from '@mui/icons-material/Add';
+import AddIcon from "@mui/icons-material/Add";
 // import RemoveIcon from '@mui/icons-material/Remove';
 
 const ButtonWrapper = styled(ButtonGroup)`
@@ -24,9 +24,11 @@ const GroupedButton = () => {
 
 	return (
 		<ButtonWrapper>
-			<StyledButton onClick={handleDecrement} disabled={counter === 0}>-</StyledButton>
+			<StyledButton onClick={handleDecrement} disabled={counter === 0}>
+				-
+			</StyledButton>
 			<Button disabled>{counter}</Button>
-			<StyledButton onClick={handleIncrement}><AddIcon/></StyledButton>
+			<StyledButton onClick={handleIncrement}>+</StyledButton>
 		</ButtonWrapper>
 	);
 };

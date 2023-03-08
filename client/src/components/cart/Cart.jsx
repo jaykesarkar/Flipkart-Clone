@@ -3,15 +3,22 @@ import { Box, Typography, Button, Grid, styled } from "@mui/material";
 import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
 import TotalAmount from "./TotalAmount";
+import EmptyCart from "./EmptyCart";
 
-const Component = styled(Grid)`
-	padding: 30px 135px;
-	display: flex;
-`;
+const Component = styled(Grid)(({ theme }) => ({
+	padding: "30px 135px",
+	display: "flex",
+	[theme.breakpoints.down("sm")]: {
+		padding: "15px 0",
+	},
+}));
 
-const LeftComponent = styled(Grid)`
-	padding-right: 15;
-`;
+const LeftComponent = styled(Grid)(({ theme }) => ({
+	paddingRight: 15,
+	[theme.breakpoints.down("sm")]: {
+		marginBottom: 15,
+	},
+}));
 
 const MyCart = styled(Box)`
 	padding: 15px 24px;
@@ -58,7 +65,7 @@ const Cart = () => {
 					</Grid>
 				</Component>
 			) : (
-				<div>Empty Cart</div>
+				<EmptyCart />
 			)}
 		</>
 	);

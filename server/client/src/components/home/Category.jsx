@@ -8,6 +8,7 @@ const Component = styled(Box)(({ theme }) => ({
 	margin: "55px 130px 0 130px !important",
 	[theme.breakpoints.down("lg")]: {
 		margin: "0px !important",
+		overflow: "hidden",
 	},
 }));
 const Container = styled(Box)`

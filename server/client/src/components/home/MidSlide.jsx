@@ -34,7 +34,7 @@ const MidSlide = ({ products }) => {
 				<Slide products={products} title="Deals of the Day" timer={true} />
 			</LeftComponent>
 			<AdvPoster>
-				<img src={advURL} style={{ width: 210, marginTop: 15 }} alt="adv" />
+				<img src={advURL} style={{ width: 210, marginTop: 18 }} alt="adv" />
 			</AdvPoster>
 		</Component>
 	);

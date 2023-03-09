@@ -15,7 +15,7 @@ const Wrapper = styled(Grid)`
 
 const Ads = () => {
 	return (
-		<Wrapper contained lg={12} md={12} sm={12} xs={12}>
+		<Wrapper contained="true" item lg={12} md={12} sm={12} xs={12}>
 			{ImageURL.map((ads, index) => {
 				return (
 					<Grid item lg={4} md={4} sm={12} xs={12} key={index}>

@@ -11,9 +11,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 // Routes
-app.use("/", router);
-app.get("/hello", (req, res) => {
-	res.send("hiii");
-});
+app.use("/allRoutes", router);
 
 export default app;

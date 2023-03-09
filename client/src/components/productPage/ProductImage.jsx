@@ -4,6 +4,8 @@ import { ShoppingCart, FlashOn } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/actions/cartActions";
+import { paytm } from "../../service/api";
+import { post } from "../../utils/paytm";
 
 const LeftContainer = styled(Box)(({ theme }) => ({
 	minWidth: "40%",
@@ -35,6 +37,15 @@ const ProductImage = ({ product }) => {
 		navigate("/cart");
 	};
 
+	const buyNow = async () => {
+		let response = await paytm({ amount: 500, email: "johnsmith@gmail.com" });
+		let information = {
+			action: "https://securegw-stage.paytm.in/order/process",
+			params: response,
+		};
+		post(information);
+	};
+
 	return (
 		<LeftContainer>
 			<Box style={{ padding: "15px 20px", border: "1.5px solid #fafafa" }}>
@@ -49,7 +60,11 @@ const ProductImage = ({ product }) => {
 				<ShoppingCart /> Add to Cart
 			</StyledButton>
 
-			<StyledButton variant="contained" style={{ background: "#fb641b" }}>
+			<StyledButton
+				variant="contained"
+				style={{ background: "#fb641b" }}
+				onClick={() => buyNow()}
+			>
 				<FlashOn /> Buy Now
 			</StyledButton>
 		</LeftContainer>

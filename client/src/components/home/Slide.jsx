@@ -97,7 +97,7 @@ const Slide = ({ products, timer, title }) => {
 				centerMode={true}
 				infinite={true}
 				autoPlay={true}
-				autoPlaySpeed={5000}
+				autoPlaySpeed={3000}
 				keyBoardControl={true}
 				showDots={false}
 				containerClass="carousel-container"

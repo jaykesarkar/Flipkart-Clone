@@ -4,25 +4,27 @@ import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
 import TotalAmount from "./TotalAmount";
 import EmptyCart from "./EmptyCart";
+import { paytm } from "../../service/api";
+import { post } from "../../utils/paytm";
 
 const Component = styled(Grid)(({ theme }) => ({
 	padding: "30px 135px",
 	display: "flex",
-	[theme.breakpoints.down("sm")]: {
-		padding: "15px 0",
+	[theme.breakpoints.down("md")]: {
+		padding: "15px 10px",
 	},
 }));
 
 const LeftComponent = styled(Grid)(({ theme }) => ({
 	paddingRight: 15,
-	[theme.breakpoints.down("sm")]: {
+	[theme.breakpoints.down("md")]: {
 		marginBottom: 15,
 	},
 }));
 
 const MyCart = styled(Box)`
 	padding: 15px 24px;
-	background: "#fff";
+	background: #fff;
 `;
 
 const ButtonWrapper = styled(Box)`
@@ -45,6 +47,15 @@ const PLaceOrder = styled(Button)`
 const Cart = () => {
 	const { cartItems } = useSelector((state) => state.cart);
 
+	const buyNow = async () => {
+		let response = await paytm({ amount: 500, email: "johnsmith@gmail.com" });
+		let information = {
+			action: "https://securegw-stage.paytm.in/order/process",
+			params: response,
+		};
+		post(information);
+	};
+
 	return (
 		<>
 			{cartItems.length ? (
@@ -57,7 +68,9 @@ const Cart = () => {
 							return <CartItem item={item} />;
 						})}
 						<ButtonWrapper>
-							<PLaceOrder variant="contained">Place Order</PLaceOrder>
+							<PLaceOrder variant="contained" onClick={() => buyNow()}>
+								Place Order
+							</PLaceOrder>
 						</ButtonWrapper>
 					</LeftComponent>
 					<Grid item lg={3} md={3} sm={12} xs={12}>

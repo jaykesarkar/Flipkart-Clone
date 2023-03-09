@@ -38,8 +38,8 @@ const Discount = styled(Typography)`
 `;
 
 const Remove = styled(Button)`
-	font-size: 16px;
-	margin-top: 20px;
+	font-size: 15px;
+	margin-top: 18px;
 `;
 
 const CartItem = ({ item }) => {
@@ -85,7 +85,9 @@ const CartItem = ({ item }) => {
 					&nbsp;&nbsp;&nbsp;
 					<Discount component="span">{item.price.discount} off</Discount>
 				</Typography>
-				<Remove onClick={() => removeItem(item.id)}>Remove</Remove>
+				<Remove onClick={() => removeItem(item.id)} variant="contained">
+					Remove
+				</Remove>
 			</Box>
 		</Component>
 	);

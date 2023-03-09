@@ -16,7 +16,7 @@ const LeftComponent = styled(Box)(({ theme }) => ({
 const AdvPoster = styled(Box)(({ theme }) => ({
 	marginTop: 10,
 	background: "#FFFFFF",
-	width: "17%",
+	width: "100%",
 	marginLeft: 10,
 	padding: 5,
 	textAlign: "center",
@@ -34,7 +34,7 @@ const MidSlide = ({ products }) => {
 				<Slide products={products} title="Deals of the Day" timer={true} />
 			</LeftComponent>
 			<AdvPoster>
-				<img src={advURL} style={{ width: 217 }} alt="adv" />
+				<img src={advURL} style={{ width: 210, marginTop: 15 }} alt="adv" />
 			</AdvPoster>
 		</Component>
 	);

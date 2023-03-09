@@ -63,33 +63,34 @@ export const Header = () => {
 
 	const [open, setOpen] = useState(false);
 
-	const handleOpen = () => {
-		setOpen(true);
-	};
 	const handleClose = () => {
 		setOpen(false);
 	};
 
-	const navbarList = () => {
+	const handleOpen = () => {
+		setOpen(true);
+	};
+
+	const navbarList = () => (
 		<Box style={{ width: 250 }} onClick={handleClose}>
 			<List>
-				<listItem>
+				<listItem button>
 					<CustomButtons />
 				</listItem>
 			</List>
-		</Box>;
-	};
+		</Box>
+	);
+
 	return (
 		<StyledHeader>
 			<Toolbar style={{ minHeight: 55 }}>
-				<MenuButton onClick={handleOpen} color="inherit">
+				<MenuButton color="inherit" onClick={handleOpen}>
 					<Menu />
 				</MenuButton>
 
 				<Drawer open={open} onClose={handleClose}>
 					{navbarList()}
 				</Drawer>
-
 				<Component to="/">
 					<img src={logoUrl} alt="logo" style={{ width: 75 }} />
 					<Box style={{ display: "flex" }}>

@@ -53,13 +53,9 @@ cd client && npm start
 
 ### Front end
 
-* Html
-
-* Css
-
-* Javascript
-
 * React.js
+
+* Styled Components
 
 * Material Ui
 

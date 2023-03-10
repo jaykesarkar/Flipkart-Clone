@@ -49,3 +49,32 @@ cd server && npm start
 ```bash
 cd client && npm start
 ```
+## Built with 
+
+### Front end
+
+* Html
+
+* Css
+
+* Javascript
+
+* React.js
+
+### Back End
+
+* [Node. js](https://nodejs.org)
+
+* [Express. js](https://expressjs.com)
+
+* [MongoDB](https://www.mongodb.com/)
+
+* [mongoose](http://mongoosejs.com/)
+
+* [dotenv](https://www.npmjs.com/package/dotenv)
+
+* [body-parser](https://www.npmjs.com/package/body-parser)
+
+### Text Editor
+
+* [Visual Studio Code](https://code.visualstudio.com/)

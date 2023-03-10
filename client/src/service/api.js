@@ -25,6 +25,5 @@ export const paytm = async (data) => {
 		return response.data;
 	} catch (error) {
 		console.log("Error", error);
-		return error.response;
 	}
 };

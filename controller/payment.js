@@ -32,7 +32,7 @@ export const paymentResponse = (request, response) => {
 	if (isVerifySignature) {
 		let paytmParams = {};
 		paytmParams["MID"] = request.body.MID;
-		paytmParams["ORDERID"] = request.body.ORDERID;
+		paytmParams["ORDER_ID"] = request.body.ORDER_ID;
 
 		paytmchecksum
 			.generateSignature(paytmParams, "bKMfNxPPf_QdZppa")

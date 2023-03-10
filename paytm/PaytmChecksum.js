@@ -79,7 +79,9 @@ class PaytmChecksum {
 			.sort()
 			.forEach(function (key, value) {
 				data[key] =
-					params[key] !== null && params[key] !== "null" ? params[key] : "";
+					params[key] !== null && params[key].toLowerCase() !== "null"
+						? params[key]
+						: "";
 			});
 		return Object.values(data).join("|");
 	}

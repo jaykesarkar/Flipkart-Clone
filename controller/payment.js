@@ -61,7 +61,7 @@ export const paymentResponse = (request, response) => {
 					post_res.on("end", function () {
 						let result = JSON.parse(res);
 						// console.log(result);
-						response.redirect(`http://localhost:8000/`);
+						response.redirect(`http://localhost:8000`);
 					});
 				});
 				post_req.write(post_data);

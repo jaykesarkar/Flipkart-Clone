@@ -11,9 +11,6 @@ client/package-lock.json
 # testing
 /coverage
 
-# production
-/build
-
 # Secret file
 config.env
 /id&password.txt

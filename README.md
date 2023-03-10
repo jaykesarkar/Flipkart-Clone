@@ -2,6 +2,10 @@
 
 This repository contains a clone of the popular Indian e-commerce website Flipkart. The project is built using the MERN (MongoDB, Express, React, Node.js) stack and includes Paytm payment integration.
 
+## Live Preview
+
+https://flipkart-clone-d124.onrender.com/
+
 ## Features
 
 The project includes the following features:

@@ -21,6 +21,7 @@ app.listen(port, () => {
 	console.log(`App running on port ${port}...`);
 });
 
+// paytm //
 export let paytmMerchantkey = process.env.PAYTM_MERCHANT_KEY;
 export let paytmParams = {};
 (paytmParams["MID"] = process.env.PAYTM_MID),
@@ -30,6 +31,6 @@ export let paytmParams = {};
 	(paytmParams["ORDER_ID"] = uuid()),
 	(paytmParams["CUST_ID"] = process.env.PAYTM_CUST_ID),
 	(paytmParams["TXN_AMOUNT"] = "100"),
-	(paytmParams["CALLBACK_URL"] = "callback");
+	(paytmParams["CALLBACK_URL"] = "http://localhost:8000/callback");
 paytmParams["EMAIL"] = "johnsmith@gmail.com";
 paytmParams["MOBILE_NO"] = "1234567852";

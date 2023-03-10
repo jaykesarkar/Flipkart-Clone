@@ -4,11 +4,11 @@ import formidable from "formidable";
 import https from "https";
 
 export const addPaymentGateway = async (request, response) => {
-	const paytmChecksum = await paytmchecksum.generateSignature(
-		paytmParams,
-		paytmMerchantkey
-	);
 	try {
+		const paytmChecksum = await paytmchecksum.generateSignature(
+			paytmParams,
+			paytmMerchantkey
+		);
 		const params = {
 			...paytmParams,
 			CHECKSUMHASH: paytmChecksum,
@@ -32,7 +32,7 @@ export const paymentResponse = (request, response) => {
 	if (isVerifySignature) {
 		let paytmParams = {};
 		paytmParams["MID"] = request.body.MID;
-		paytmParams["ORDER_ID"] = request.body.ORDER_ID;
+		paytmParams["ORDERID"] = request.body.ORDERID;
 
 		paytmchecksum
 			.generateSignature(paytmParams, "bKMfNxPPf_QdZppa")

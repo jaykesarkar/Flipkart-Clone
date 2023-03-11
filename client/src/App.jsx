@@ -14,7 +14,7 @@ const App = () => {
 				<Header />
 				<Box style={{ marginTop: 56 }}></Box>
 				<Routes>
-					<Route path="/" element={<Home />} />
+					<Route path="/api" element={<Home />} />
 					<Route path="/product/:id" element={<DetailView />} />
 					<Route path="/cart" element={<Cart />} />
 				</Routes>

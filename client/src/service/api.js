@@ -21,7 +21,7 @@ export const authenticateLogin = async (user) => {
 
 export const paytm = async (data) => {
 	try {
-		let response = await axios.post(`${url}/api/payment`, data);
+		let response = await axios.post(`${url}/payment`, data);
 		return response.data;
 	} catch (error) {
 		console.log("Error", error);

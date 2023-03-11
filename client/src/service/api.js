@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const url = "";
+const url = "http://flipkart-clone-d124.onrender.com/";
 
 export const authenticateSignup = async (user) => {
 	try {
-		return await axios.post(`${url}/api/signUp`, user);
+		return await axios.post(`${url}/signUp`, user);
 	} catch (error) {
 		console.log("Error while calling Signup API: ", error);
 	}
@@ -12,7 +12,7 @@ export const authenticateSignup = async (user) => {
 
 export const authenticateLogin = async (user) => {
 	try {
-		return await axios.post(`${url}/api/login`, user);
+		return await axios.post(`${url}/login`, user);
 	} catch (error) {
 		console.log("Error while calling login API: ", error);
 		return error.response;
@@ -21,7 +21,7 @@ export const authenticateLogin = async (user) => {
 
 export const paytm = async (data) => {
 	try {
-		let response = await axios.post(`${url}/api/payment`, data);
+		let response = await axios.post(`${url}/payment`, data);
 		return response.data;
 	} catch (error) {
 		console.log("Error", error);

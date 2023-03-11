@@ -6,7 +6,7 @@ const url = "";
 export const getProducts = () => async (dispatch) => {
 	try {
 		const { data } = await axios.get(
-			`https://flipkart-clone-d124.onrender.com/api/products`
+			`https://flipkart-clone-d124.onrender.com/products`
 		);
 		dispatch({ type: actionTypes.GET_PRODUCTS_SUCCESS, payload: data });
 	} catch (error) {
@@ -18,7 +18,7 @@ export const getProductDetails = (id) => async (dispatch) => {
 	try {
 		dispatch({ type: actionTypes.GET_PRODUCT_DETAILS_REQUEST });
 		const { data } = await axios.get(
-			`https://flipkart-clone-d124.onrender.com/api/product/${id}`
+			`https://flipkart-clone-d124.onrender.com/product/${id}`
 		);
 
 		dispatch({ type: actionTypes.GET_PRODUCT_DETAILS_SUCCESS, payload: data });

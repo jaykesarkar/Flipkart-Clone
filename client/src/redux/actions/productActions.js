@@ -1,7 +1,7 @@
 import * as actionTypes from "../constants/productConstant";
 import axios from "axios";
 
-const url = "https://flipkart-clone-d124.onrender.com/";
+const url = "";
 
 export const getProducts = () => async (dispatch) => {
 	try {

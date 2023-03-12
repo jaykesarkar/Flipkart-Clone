@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "https://flipkart-clone-d124.onrender.com/";
+const url = "";
 
 export const authenticateSignup = async (user) => {
 	try {

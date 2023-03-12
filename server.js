@@ -24,7 +24,7 @@ app.listen(port, () => {
 	console.log(`App running on port ${port}...`);
 });
 
-const url = "https://flipkart-clone-d124.onrender.com";
+const url = "https://flipkart-clone-d124.onrender.com/flipkart";
 
 // paytm //
 export let paytmMerchantkey = process.env.PAYTM_MERCHANT_KEY;

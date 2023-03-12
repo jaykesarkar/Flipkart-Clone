@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 // Routes
-app.use("/", router);
+app.use("/flipkart", router);
 
 // Serving Frontend(client)
 app.use(express.static(path.join(__dirname, "./client/build")));

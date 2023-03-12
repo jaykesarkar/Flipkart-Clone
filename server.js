@@ -34,10 +34,8 @@ export let paytmParams = {};
 	(paytmParams["ORDER_ID"] = uuid()),
 	(paytmParams["CUST_ID"] = process.env.PAYTM_CUST_ID),
 	(paytmParams["TXN_AMOUNT"] = "100"),
-	(paytmParams["CALLBACK_URL"] =
-		"https://flipkart-clone-d124.onrender.com/callback");
+	(paytmParams[
+		"CALLBACK_URL"
+	] = `https://flipkart-clone-d124.onrender.com/flipkart/callback`);
 paytmParams["EMAIL"] = "johnsmith@gmail.com";
 paytmParams["MOBILE_NO"] = "1234567852";
-
-// Routes
-// app.use("/api", router);

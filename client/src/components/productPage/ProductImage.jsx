@@ -38,8 +38,8 @@ const ProductImage = ({ product }) => {
 	};
 
 	const buyNow = async () => {
-		let response = await paytm({ amount: 500, email: "johnsmith@gmail.com" });
-		let information = {
+		let response = await paytm({ amount: 500, email: "jay@gmail.com" });
+		var information = {
 			action: "https://securegw-stage.paytm.in/order/process",
 			params: response,
 		};

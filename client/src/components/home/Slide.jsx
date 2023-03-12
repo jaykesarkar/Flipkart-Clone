@@ -106,7 +106,10 @@ const Slide = ({ products, timer, title }) => {
 				itemClass="carousel-item-padding-40-px"
 			>
 				{products.map((product) => (
-					<Link to={`product/${product.id}`} style={{ textDecoration: "none" }}>
+					<Link
+						to={`/product/${product.id}`}
+						style={{ textDecoration: "none" }}
+					>
 						<Box textAlign="center" style={{ padding: "25px 15px" }}>
 							<Image src={product.url} alt="products" />
 							<Text style={{ fontWeight: 600, color: "#212121" }}>

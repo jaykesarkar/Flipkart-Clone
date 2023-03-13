@@ -10,13 +10,13 @@ const ImageURL = [
 const ImageURL2 = [
 	"https://rukminim1.flixcart.com/fk-p-flap/480/480/image/7767f053f3abf622.jpg?q=50",
 	"https://rukminim1.flixcart.com/fk-p-flap/480/480/image/90c3b822d824724b.jpg?q=50",
-	"https://rukminim1.flixcart.com/flap/960/960/image/1ce0c4c1fb501b45.jpg?q=50",
+	"https://rukminim1.flixcart.com/fk-p-flap/480/480/image/ed554cd441e63636.jpg?q=50",
 ];
 
 const ImageURL3 = [
-	"https://rukminim1.flixcart.com/fk-p-flap/480/480/image/ed554cd441e63636.jpg?q=50",
 	"https://rukminim1.flixcart.com/fk-p-flap/480/480/image/abb4535ad1986932.jpg?q=50",
 	"https://rukminim1.flixcart.com/fk-p-flap/480/480/image/bac844862fa44b82.jpg?q=50",
+	"https://rukminim1.flixcart.com/fk-p-flap/480/480/image/1bcbd6b93b352ba0.jpg?q=50",
 ];
 
 const Wrapper = styled(Grid)`

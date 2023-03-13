@@ -34,11 +34,11 @@ const Home = () => {
 			<Component>
 				<Banner />
 				<MidSlide products={products} />
-				<Ads />
-				<Slide products={products} title="Top Selection" timer={false} />
 				<Ads2 />
-				<Slide products={products} title="Recommended Items" timer={false} />
+				<Slide products={products} title="Top Selection" timer={false} />
 				<Ads3 />
+				<Slide products={products} title="Recommended Items" timer={false} />
+				<Ads />
 				<Slide products={products} title="Discounts for You" timer={false} />
 				<Footer />
 			</Component>

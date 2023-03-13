@@ -10,7 +10,7 @@ const ImageURL = [
 const ImageURL2 = [
 	"https://rukminim1.flixcart.com/fk-p-flap/480/480/image/7767f053f3abf622.jpg?q=50",
 	"https://rukminim1.flixcart.com/fk-p-flap/480/480/image/90c3b822d824724b.jpg?q=50",
-	"https://rukminim1.flixcart.com/fk-p-flap/480/480/image/ed554cd441e63636.jpg?q=50",
+	"",
 ];
 
 const Wrapper = styled(Grid)`

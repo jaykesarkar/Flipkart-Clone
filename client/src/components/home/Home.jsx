@@ -4,7 +4,7 @@ import Banner from "./Banner";
 import Slide from "./Slide";
 import MidSlide from "./MidSlide";
 import Ads from "./Ads";
-import Ads2 from "./Ads";
+import { Ads2 } from "./Ads";
 import Footer from "./Footer";
 import { Box, styled } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux"; // hooks

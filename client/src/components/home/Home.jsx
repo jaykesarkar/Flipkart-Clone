@@ -4,6 +4,7 @@ import Banner from "./Banner";
 import Slide from "./Slide";
 import MidSlide from "./MidSlide";
 import Ads from "./Ads";
+import Ads2 from "./Ads";
 import Footer from "./Footer";
 import { Box, styled } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux"; // hooks
@@ -34,6 +35,7 @@ const Home = () => {
 				<MidSlide products={products} />
 				<Ads />
 				<Slide products={products} title="Top Selection" timer={false} />
+				<Ads2 />
 				<Slide products={products} title="Recommended Items" timer={false} />
 				<Slide products={products} title="Discounts for You" timer={false} />
 				<Footer />

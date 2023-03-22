@@ -4,7 +4,9 @@ This repository contains a clone of the popular Indian e-commerce website Flipka
 
 ## Live Preview
 
-https://flipkart-clone-d124.onrender.com/
+* https://flipkart-clone-d124.onrender.com/
+* https://flipkart.cyclic.app
+* https://frail-cuff-lion.cyclic.app
 
 ## Features
 
